@@ -3,21 +3,21 @@
 <form action="/visit" method="POST">
   <div class="form-group">
     <label>Ваше имя</label>
-    <input name="username" type="text" class="form-control" placeholder="Введите ваше имя">
+    <input id="bbb" name="username" type="text" class="form-control" placeholder="Введите ваше имя">
   </div>
 
   <div class="form-group">
     <label>Номер телефона</label>
-    <input name="phone" type="text" class="form-control" placeholder="Введите ваш номер телефона">
+    <input name="phone" type="text" class="form-control ccc" placeholder="Введите ваш номер телефона">
   </div>
 
   <div class="form-group">
     <label>Когда вас ждать?</label>
-    <input name="date_time" type="text" class="form-control" placeholder="Введите дату и время">
+    <input id="aaa" name="date_time" type="text" class="form-control" placeholder="Введите дату и время">
   </div>
  	
   <label for="hairstylist">Выберите паркмахера</label>
- 	  <select name="hairstylist">
+ 	  <select name="hairstylist" class="form-control ccc">
       <option value="none" selected>Выберите парикмахера...</option>
       <option value="Walter White">Walter White</option>
       <option value="Jessie Pinkman">Jessie Pinkman</option>
@@ -26,3 +26,9 @@
 
   <button type="submit" class="btn btn-primary">Записаться</button>
 </form>
+
+<script type="text/javascript"> 
+$('#bbb').css('backgrond-color', 'blue');
+$('#aaa').css('backgrond-color', 'yellow');
+$('.ccc').css('backgrond-color', 'red');
+</script>
