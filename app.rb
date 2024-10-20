@@ -24,12 +24,13 @@ post '/visit' do
 	@phone = params[:phone]
 	@date_time = params[:date_time]
 	@hairstylist = params[:hairstylist]
+	@color = params[:color]
 
 	#@title = 'Благодарим за Ваш выбор!'
 	#@message = "Уважаемый(ая) #{@username}, мы будем вас ждать #{@date_time}"
 
 	f = File.open 'C:/Projects/Ruby_Lesson_22/public/users.txt', 'a'
-	f.write "User: #{@username}, Phone: #{@phone}, Date and time: #{@date_time}, Hairstylist: #{@hairstylist}\n"
+	f.write "User: #{@username}, Phone: #{@phone}, Date and time: #{@date_time}, Hairstylist: #{@hairstylist}, Color: #{@color}\n"
 	f.close
 
 	erb :visit_result
